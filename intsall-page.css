@@ -1,0 +1,366 @@
+/* // Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+/* // Variables */
+:root{
+    --primary-color: 9, 37,63;
+    --secondary-color: 255, 255, 255;
+    --text-color: 50, 50, 50;
+}
+
+
+/* // Use border-box for everything */
+html {
+  box-sizing: border-box;
+}
+
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+img,
+svg{
+    display: block;
+}
+/* // Resets margins and paddings for headers, ul, ol and p */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+li,
+p,
+blockquote {
+  margin: 0;
+  padding: 0;
+}
+ul,
+li{
+    list-style: none;
+}
+/* // Completely resets form items
+----------------------------
+// Super hard reset that removes all borders
+// and radius of all form items. */
+
+input,
+textarea,
+button {
+  border: 0;
+  border-radius: 0;
+  outline: none;
+  appearance: none;
+}
+input:hover,
+textarea:hover,
+button:hover,
+input:active,
+textarea:active,
+button:active,
+input:focus,
+textarea:focus,
+button:focus{
+  outline: none;
+}
+/* // Set Image and Objects to have a max-width of 100% */
+embed,
+iframe,
+img,
+object,
+video {
+  max-width: 100%;
+}
+.btn{
+    font-size: clamp(0.75rem, 2vw, 1rem);
+    background: rgba(var(--primary-color), 0.9);
+    color:rgba(var(--secondary-color), 1);
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: ease all 0.5s;
+    font-weight: 400;
+    cursor: pointer;
+}
+.btn:hover{
+    background: rgba(var(--primary-color), 1);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #F8FEFF;
+}
+main.integration--container {
+    display: flex;
+    margin: auto;
+    max-width: 960px;
+    width: 100%;
+    padding: 30px 0;
+    flex-direction: column;
+}
+.button--col {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
+
+
+.button--col .cancel-btn{
+    font-size: clamp(0.875rem, 2vw, 1rem);
+    margin-right: 20px;
+    color: rgba(var(--primary-color), 0.6);
+    text-decoration: none;
+    transition: ease all 0.5s;
+}
+.button--col .cancel-btn:hover{
+    color: rgba(var(--primary-color), 1);
+}
+
+.int_top--block {
+    display: flex;
+    width: 100%;
+    background: rgba(var(--secondary-color), 1);
+    padding: 30px;
+    border-radius: 10px;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.brand--col{
+    background: #EEF7FF;
+    position: relative;
+    width: 320px;
+    height: 130px;
+    border-radius: 120px;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    gap: 16px;
+}
+.brand-logo{
+    width: 96px;
+    height: 96px;
+    border-radius: 96px;
+    background: rgba(var(--secondary-color), 1);
+    box-shadow: rgb(83 84 121 / 4%) 0px 24px 40px, rgb(83 84 121 / 2%) 0px 1px 2px;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    animation: scale 2.5s infinite;
+}
+@keyframes scale {
+    0% {
+       transform: scale(1);
+    }
+    
+    50% {
+     transform: scale(1.1);
+    }
+    
+    100% {
+      transform: scale(1);
+    }
+  }
+.brand--gear{
+    display: flex;
+    width: 60px;
+    height: 24px;
+    gap: 4px;
+    background: rgba(var(--secondary-color), 1);
+    box-shadow: rgb(83 84 121 / 4%) 0px 24px 40px, rgb(83 84 121 / 2%) 0px 1px 2px;
+    border-radius: 12px;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    animation: rotate 5s infinite linear;
+}
+@keyframes rotate {
+from {
+       transform: rotate(0deg);
+    }
+    to {
+    transform: rotate(359deg);
+    }
+  }
+.gear-icon01{
+    animation: gear_arrow 2.5s infinite linear;
+}
+  @keyframes gear_arrow {
+    0% {
+       transform: scale(1);
+       opacity: 1;
+    }
+    
+    50% {
+     transform: scale(0.8);
+     opacity: 0.4;
+    }
+    
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  .gear-icon02{
+    animation: gear 2.5s infinite linear;
+  }
+  @keyframes gear {
+    0% {
+       transform: scale(0.8);
+       opacity: 0.4;
+    }
+    
+    50% {
+     transform: scale(1);
+     opacity: 1;
+    }
+    
+    100% {
+        transform: scale(0.8);
+        opacity: 0.5;
+    }
+  }
+.int_title--block {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    padding: 0 10%;
+    margin-top: 20px;
+    flex-direction: column;
+}
+.int_title--block span{
+    display: block;
+    width: 100%;
+    color: #33BCD3;
+    font-size: 1rem;
+    font-size: clamp(0.875rem, 2vw, 1rem);
+    font-weight: 500;
+}
+.int_title--block h1 {
+    font-weight: 400;
+    font-size: clamp(1.25rem, 2vw, 2rem);
+    color: rgba(var(--primary-color), 1);
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+}
+.int_title--block h1 strong{
+    font-weight: 600;
+}
+.form--feature {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form--feature li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 10px;
+    font-size: clamp(0.75rem, 2vw, 0.875rem);
+    font-weight: 400;
+    color: rgba(var(--primary-color), 1);
+}
+.form--feature li svg{
+    margin-right: 5px;
+}
+
+
+.description--col {
+    display: block;
+    margin-top: 30px;
+    font-size: 0.75rem;
+    font-size: clamp(0.65rem, 2vw, 0.75rem);
+    color: rgba(var(--text-color), 0.8);
+}
+.description--col a{
+    color: rgba(var(--text-color), 1);
+    font-weight: 500;
+}
+
+.int_bottom--block{
+    display: flex;
+    width: 100%;
+    background: rgba(var(--secondary-color), 1);
+    padding: 30px;
+    border-radius: 10px;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px 0;
+}
+.title--block {
+    display: block;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.title--block span {font-size: 0.75rem;text-transform: uppercase;font-weight: 500;color: rgba(var(--primary-color), 1);}
+.title--block p {
+    font-size: clamp(0.75rem, 2vw, 1rem);
+    color: rgba(var(--text-color), 1);
+}
+.permisson--list {
+    display: block;
+    width: 100%;
+}
+.permisson--list ul{
+    display: block;
+    width: 100%;
+}
+.permisson--list li {
+    font-size: clamp(0.75rem, 2vw, 0.875rem);
+    color: rgba(var(--text-color), 1);
+    display: flex;
+    justify-content: space-between;
+	background-image: url("data:image/svg+xml,%3Csvg width='7' height='11' viewBox='0 0 7 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0.219838 1.28221C0.0790079 1.14128 -7.02808e-05 0.950181 4.68689e-08 0.750947C7.03745e-05 0.551713 0.0792832 0.360668 0.220213 0.219838C0.361142 0.0790077 0.552244 -7.02778e-05 0.751478 4.68651e-08C0.950712 7.03715e-05 1.14176 0.0792832 1.28259 0.220213L6.00759 4.94521C6.14819 5.08586 6.22718 5.27659 6.22718 5.47546C6.22718 5.67434 6.14819 5.86507 6.00759 6.00571L1.28259 10.7307C1.14176 10.8715 0.950751 10.9507 0.751588 10.9507C0.552424 10.9507 0.361418 10.8715 0.220588 10.7307C0.0797578 10.5899 0.000640202 10.3989 0.000640201 10.1997C0.000640199 10.0005 0.0797578 9.80954 0.220588 9.66871L4.41309 5.47546L0.219838 1.28221Z' fill='%2309253F' fill-opacity='0.7'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: 15px center;
+    padding: 10px 20px 10px 35px;
+    border-bottom: 1px solid rgba(var(--text-color), 0.1);
+    transition: ease all 0.5s;
+}
+.permisson--list li span{
+    color: rgba(var(--text-color), 0.5);
+    text-align: right;
+}
+.permisson--list li:last-child{
+    border-bottom: 0;
+}
+.permisson--list li:hover{
+    background-color: rgba(var(--text-color), 0.05);
+}
+
+@media only screen and (max-width: 980px) {
+    .int_top--block, .int_bottom--block{
+        padding: 20px;
+    }
+    main.integration--container{
+        padding: 20px;
+    }
+    .permisson--list li{
+        padding: 10px 5px 10px 20px;
+        background-position: 5px center;
+    }
+    .form--feature{
+        flex-direction: column;
+    }
+    .form--feature li{
+        margin: 5px 0;
+    }
+}

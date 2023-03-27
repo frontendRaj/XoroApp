@@ -1,0 +1,356 @@
+/* // Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+/* // Variables */
+:root{
+    --primary-color: 9, 37,63;
+    --secondary-color: 255, 255, 255;
+    --text-color: 50, 50, 50;
+}
+
+
+/* // Use border-box for everything */
+html {
+  box-sizing: border-box;
+}
+
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+img,
+svg{
+    display: block;
+}
+/* // Resets margins and paddings for headers, ul, ol and p */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+li,
+p,
+blockquote {
+  margin: 0;
+  padding: 0;
+}
+ul,
+li{
+    list-style: none;
+}
+/* // Completely resets form items
+----------------------------
+// Super hard reset that removes all borders
+// and radius of all form items. */
+
+input,
+textarea,
+button {
+  border: 0;
+  border-radius: 0;
+  outline: none;
+  appearance: none;
+}
+input:hover,
+textarea:hover,
+button:hover,
+input:active,
+textarea:active,
+button:active,
+input:focus,
+textarea:focus,
+button:focus{
+  outline: none;
+}
+/* // Set Image and Objects to have a max-width of 100% */
+embed,
+iframe,
+img,
+object,
+video {
+  max-width: 100%;
+}
+.btn{
+    font-size: clamp(0.75rem, 2vw, 1rem);
+    background: rgba(var(--primary-color), 0.9);
+    color:rgba(var(--secondary-color), 1);
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: ease all 0.5s;
+    font-weight: 400;
+    cursor: pointer;
+}
+.btn:hover{
+    background: rgba(var(--primary-color), 1);
+}
+
+
+body {
+    background-color: rgba(var(--secondary-color), 1);
+    font-family: 'Poppins', sans-serif;
+    background-image: url(./auth-left-shape.png), url(./auth-right-shape.png);
+    background-repeat: no-repeat;
+    background-position: left bottom, right bottom;
+}
+.container{
+    max-width: 1280px;
+    width: 100%;
+    margin: auto;
+    position: relative;
+}
+header{
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(var(--primary-color), 0.1);
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+}
+header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.h_right--block {
+    display: flex;
+    align-items: center;
+}
+.h_right--block p{
+    color: rgba(var(--primary-color), 1);
+    font-size: clamp(0.75rem, 2vw, 0.875rem);
+    margin-right: 15px;
+}
+
+
+main {
+    display: block;
+    padding-top:69px;
+}
+section{
+    display: block;
+}
+.sub-header .container {
+    display: flex;
+    align-items: center;
+}
+.sub-header {
+    padding: 30px 0;
+    background: #EEF7FF;
+    position: relative;
+}
+.xoro-logo {
+    display: flex;
+    width: 80px;
+    height: 80px;
+    background: rgba(var(--secondary-color), 1);
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    box-shadow: 6px 6px 40px rgba(var(--primary-color), 0.1);
+    margin-right: 15px;
+}
+.xoro-logo svg,
+.xoro-logo img{
+    max-width: 100%;
+}
+.sub-header::before {
+    display: block;
+    width:calc((100vw - 1320px) / 2 + 40px + 20px);
+    height: 100%;
+    background: rgba(var(--primary-color), 1);
+    position: absolute;
+    left: 0;
+    content: '';
+    top: 0;
+    z-index: 0;
+}
+.integration-text {
+    display: block;
+}
+.integration-text h2 {
+    font-size: clamp(1rem,2.6vw,  1.125rem);
+    color: rgba(var(--primary-color), 1);
+    font-weight: 500;
+    
+}
+.integration-text p {
+    display: flex;
+    align-items: center;
+    font-size: 0.813rem;
+    color: rgba(var(--text-color), 1);
+}
+.integration-text p svg{
+    margin-right: 5px;
+}
+.content--area {
+    padding: 80px 20px;
+}
+.form--header {
+    max-width: 780px;
+    margin: auto;
+    text-align: center;
+}
+.form--header h1{
+    font-size: clamp(1.25rem,2.6vw, 2.625rem);
+    color: rgba(var(--primary-color), 1);
+    padding: 0 5%;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+.form--header p{
+    font-size: clamp(0.875rem, 2vw, 1rem);
+    font-weight: 400;
+    color: rgba(var(--text-color), 1);
+}
+.form-section {
+    max-width: 480px;
+    margin: 30px auto;
+    text-align: center;
+}
+.form-section label{
+    font-size: clamp(0.875rem, 2vw, 1.125rem);
+    color: rgba(var(--text-color), 1);
+}
+.form-section .input-box{
+    display: block;
+    width: 100%;
+    margin: 15px 0;
+    text-align: center;
+    border: 1px solid rgba(var(--primary-color), 0.5);
+    border-radius: 5px;
+    padding: 20px;
+    font-size: clamp(0.875rem, 2vw, 1rem);
+    font-weight: 400;
+    color: rgba(var(--primary-color), 1);
+}
+.form-section .btn{
+    width: 100%;
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    font-weight: 500;
+    padding: 15px;
+}
+.form--feature {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form--feature li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 10px;
+    font-size: clamp(0.75rem, 2vw, 0.875rem);
+    font-weight: 400;
+    color: rgba(var(--primary-color), 1);
+}
+.form--feature li svg{
+    margin-right: 5px;
+}
+
+
+/* footer */
+footer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 10px;
+    font-size: clamp(0.875rem, 2vw, 0.9rem);
+    color: rgba(var(--text-color), 0.6);
+}
+footer p{
+    margin-left: 5px;
+}
+footer a{
+    color: rgba(var(--text-color), 0.6);
+    transition: ease all 0.2s;
+}
+footer a:hover{
+    color: rgba(var(--text-color), 0.8);
+}
+
+
+/* // Responsive */
+@media only screen and (max-width: 1580px) {
+    header{
+        position: relative;
+        padding: 10px 0;
+    }
+    main{
+        padding:0;
+        min-height: auto;
+    }
+    .content--area {
+        padding: 30px 20px 10px;
+    }
+    .sub-header{
+        padding: 20px 0;
+    }
+    .form-section{
+        margin: 20px auto;
+    }
+    footer{
+        position: relative;
+        padding: 20px 0;
+    }
+}
+@media only screen and (max-width: 1280px) {
+    .container{
+        padding: 0 5%;
+    }
+}
+@media only screen and (max-width: 1080px) {
+    .content--area {
+        padding: 60px 20px 20px;
+    }
+}
+@media only screen and (max-width: 580px) {
+    body{
+        background-size: 30%;
+    }
+    .form--feature{
+        flex-direction: column;
+    }
+    .form--feature li{
+        margin: 5px 0px;
+    }
+    .xoro-logo{
+        width: 60px;
+        height: 60px;
+    }
+    .content--area {
+        padding: 30px 20px 20px;
+    }
+}
+@media only screen and (max-width: 480px) {
+    .container{
+        padding:0 3%;
+    }
+    .h_left--block img{
+        max-width: 100px;
+    }
+    .h_right--block p{
+        margin-right: 5px;
+    }
+    .h_right--block .btn{
+        padding: 5px 10px;
+    }
+}
+@media only screen and (max-width: 380px) {
+    .h_left--block img{
+        max-width: 80px;
+    }
+    .h_right--block .btn{
+        font-size: 0.625rem;
+    }
+}
